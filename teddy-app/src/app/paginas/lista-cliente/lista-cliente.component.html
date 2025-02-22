@@ -1,0 +1,51 @@
+<section>
+  <header>
+    <p class="clientes-encontrados">
+      <span>{{ clientes.length }}</span> clientes encontrados:
+    </p>
+    <p>
+      Clientes por página:
+      <select class="itemsPerPage" [(ngModel)]="itemsPerPage">
+        <option *ngFor="let option of pageSizeOptions" [value]="option">
+          {{ option }}
+        </option>
+      </select>
+    </p>
+  </header>
+  <main class="container-cards">
+    <teddy-card-cliente
+      *ngFor="
+        let cliente of clientes
+          | paginate : { itemsPerPage: itemsPerPage, currentPage: page }
+      "
+      [cliente]="cliente"
+      (onAdd)="selectedCliente(cliente)"
+      (onEdit)="editarCliente(cliente)"
+      (onDelete)="excluirCliente(cliente)"
+    ></teddy-card-cliente>
+  </main>
+  <footer>
+    <button (click)="viewForm = true" class="criar-cliente">
+      Criar cliente
+    </button>
+    <pagination-controls
+      (pageChange)="page = $event"
+      class="custom-pagination"
+      [directionLinks]="false"
+      [autoHide]="true"
+    >
+    </pagination-controls>
+  </footer>
+</section>
+<div class="overlay" *ngIf="viewForm">
+  <teddy-client-form
+    [cliente]="cliente"
+    (onClose)="fecharForm()"
+  ></teddy-client-form>
+</div>
+<div class="overlay" *ngIf="viewConfirmacao">
+  <teddy-modal-confirmacao
+    [cliente]="cliente"
+    (onClose)="fecharModal()"
+  ></teddy-modal-confirmacao>
+</div>

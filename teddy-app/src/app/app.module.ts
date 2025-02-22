@@ -8,6 +8,11 @@ import { NavBarComponent } from './componentes/nav-bar/nav-bar.component';
 import { LoginComponent } from './paginas/login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { ListaClienteComponent } from './paginas/lista-cliente/lista-cliente.component';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { CardClienteComponent } from './componentes/card-cliente/card-cliente.component';
+import { ClienteFormComponent } from './paginas/lista-cliente/cliente-form/cliente-form.component';
+import { ModalConfirmacaoComponent } from './paginas/lista-cliente/modal-confirmacao/modal-confirmacao.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +20,10 @@ import { CommonModule } from '@angular/common';
     TopMenuComponent,
     NavBarComponent,
     LoginComponent,
+    ListaClienteComponent,
+    CardClienteComponent,
+    ClienteFormComponent,
+    ModalConfirmacaoComponent,
   ],
   imports: [
     BrowserModule,
@@ -22,6 +31,7 @@ import { CommonModule } from '@angular/common';
     FormsModule,
     CommonModule,
     ReactiveFormsModule,
+    NgxPaginationModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

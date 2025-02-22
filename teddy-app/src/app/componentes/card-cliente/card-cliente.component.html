@@ -1,0 +1,21 @@
+<div class="box-cliente">
+  <h4>{{ cliente.name }}</h4>
+  <p>Salário: R${{ cliente.salary }}</p>
+  <p>Empresa: R${{ cliente.companyValuation }}</p>
+  <span
+    class="material-symbols-outlined selected"
+    (click)="onRemoveClientSelected.emit()"
+    *ngIf="selected"
+  >
+    remove
+  </span>
+  <div class="acoes" *ngIf="!selected">
+    <span class="material-symbols-outlined" (click)="onAdd.emit()"> add </span>
+    <span class="material-symbols-outlined" (click)="onEdit.emit()">
+      edit
+    </span>
+    <span class="material-symbols-outlined excluir" (click)="onDelete.emit()">
+      delete
+    </span>
+  </div>
+</div>
