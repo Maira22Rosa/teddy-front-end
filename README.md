@@ -1,1 +1,0 @@
-# teddy-front-end
