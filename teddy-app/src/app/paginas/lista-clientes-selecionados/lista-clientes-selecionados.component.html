@@ -1,0 +1,20 @@
+<section>
+  <header>
+    <p class="clientes-encontrados"><span>clientes encontrados:</span></p>
+  </header>
+  <main class="container-cards">
+    <ng-container *ngFor="let cliente of clientesSelecionados">
+      <teddy-card-cliente
+        [cliente]="cliente"
+        [selected]="true"
+        (onRemoveClientSelected)="removerClienteSelected(cliente)"
+      ></teddy-card-cliente>
+    </ng-container>
+    <p *ngIf="clientesSelecionados.length === 0">Não há nenhum cliente</p>
+  </main>
+  <footer>
+    <button class="criar-cliente" (click)="resetLista()">
+      Limpar clientes selecionados
+    </button>
+  </footer>
+</section>
