@@ -15,6 +15,7 @@ import { ClienteFormComponent } from './paginas/lista-cliente/cliente-form/clien
 import { ModalConfirmacaoComponent } from './paginas/lista-cliente/modal-confirmacao/modal-confirmacao.component';
 import { ListaClientesSelecionadosComponent } from './paginas/lista-clientes-selecionados/lista-clientes-selecionados.component';
 import { HttpClientModule } from '@angular/common/http';
+import { BotaoPrimaryComponent } from './componentes/botao-primary/botao-primary.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { HttpClientModule } from '@angular/common/http';
     ClienteFormComponent,
     ModalConfirmacaoComponent,
     ListaClientesSelecionadosComponent,
+    BotaoPrimaryComponent,
   ],
   imports: [
     BrowserModule,

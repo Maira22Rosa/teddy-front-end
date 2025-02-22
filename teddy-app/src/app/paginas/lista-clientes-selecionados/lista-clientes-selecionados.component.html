@@ -13,8 +13,9 @@
     <p *ngIf="clientesSelecionados.length === 0">Não há nenhum cliente</p>
   </main>
   <footer>
-    <button class="criar-cliente" (click)="resetLista()">
-      Limpar clientes selecionados
-    </button>
+    <teddy-botao-primary
+      (onClick)="resetLista()"
+      [label]="'Limpar clientes selecionados'"
+    ></teddy-botao-primary>
   </footer>
 </section>

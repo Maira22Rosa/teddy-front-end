@@ -25,9 +25,11 @@
     ></teddy-card-cliente>
   </main>
   <footer>
-    <button (click)="viewForm = true" class="criar-cliente">
-      Criar cliente
-    </button>
+    <teddy-botao-primary
+      (onClick)="viewForm = true"
+      [label]="'Criar cliente'"
+    ></teddy-botao-primary>
+
     <pagination-controls
       (pageChange)="page = $event"
       class="custom-pagination"
