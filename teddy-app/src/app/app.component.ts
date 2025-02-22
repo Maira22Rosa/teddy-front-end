@@ -7,7 +7,7 @@ import { LoginService } from './servicos/login-service';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  title = 'teddy-front-end';
+  title = 'teddy-app';
   isLoggedIn: boolean = false;
   nameUsuario: string = '';
   constructor(private loginService: LoginService) {}

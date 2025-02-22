@@ -14,6 +14,7 @@ import { CardClienteComponent } from './componentes/card-cliente/card-cliente.co
 import { ClienteFormComponent } from './paginas/lista-cliente/cliente-form/cliente-form.component';
 import { ModalConfirmacaoComponent } from './paginas/lista-cliente/modal-confirmacao/modal-confirmacao.component';
 import { ListaClientesSelecionadosComponent } from './paginas/lista-clientes-selecionados/lista-clientes-selecionados.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -32,9 +33,11 @@ import { ListaClientesSelecionadosComponent } from './paginas/lista-clientes-sel
     AppRoutingModule,
     FormsModule,
     CommonModule,
+    HttpClientModule,
     ReactiveFormsModule,
     NgxPaginationModule,
   ],
+  exports: [CardClienteComponent],
   providers: [],
   bootstrap: [AppComponent],
 })
