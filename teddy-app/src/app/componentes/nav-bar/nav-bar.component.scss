@@ -1,0 +1,99 @@
+//animação do navBar
+@keyframes fadeInNav {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeOutNav {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+}
+
+.nav-bar {
+  height: 100%;
+  width: 40vh;
+  margin-bottom: 16px;
+  border-top-right-radius: 4px;
+  border-bottom: 1px solid rgb(213, 212, 212);
+  display: block;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+  z-index: 1000;
+  box-shadow: 1px 1px rgb(0 0 0 / 10%);
+  animation: fadeInNav 0.5s ease-in-out;
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10em;
+    width: 100%;
+    background-color: rgb(49, 45, 45);
+  }
+
+  header img {
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: contain;
+  }
+}
+
+button {
+  border: none;
+  border-radius: 50%;
+  background-color: black;
+  width: 50px;
+  height: 50px;
+  top: 10em;
+  left: 20em;
+  position: absolute;
+  span {
+    margin-top: 3px;
+    font-size: 16px;
+    border-radius: 50%;
+    background-color: white;
+  }
+  & {
+    cursor: pointer;
+  }
+}
+
+.container-bar {
+  display: grid;
+  margin-top: 48px;
+  a {
+    display: flex;
+    padding: 24px;
+    align-items: center;
+    font-weight: bold;
+    font-family: "Inter";
+
+    &.active {
+      color: #ec6724;
+    }
+  }
+  span {
+    margin-right: 4px;
+  }
+}
+
+.container-bar > * {
+  margin-left: 15px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}

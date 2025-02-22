@@ -1,0 +1,17 @@
+<nav class="nav-bar">
+  <header><img src="../../../assets/svg/logo.svg" alt="logo" /></header>
+
+  <button (click)="onFecharNav.emit()">
+    <span class="material-symbols-outlined"> arrow_back </span>
+  </button>
+  <div class="container-bar">
+    <a><span class="material-symbols-outlined"> home </span>Home</a>
+    <a [routerLink]="'/clientes'" routerLinkActive="active"
+      ><span class="material-symbols-outlined"> person </span>Clientes</a
+    >
+    <a [routerLink]="'/clientes-selecionados'" routerLinkActive="active"
+      ><span class="material-symbols-outlined"> apps </span>Clientes
+      selecionados</a
+    >
+  </div>
+</nav>

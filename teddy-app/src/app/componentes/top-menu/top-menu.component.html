@@ -1,0 +1,25 @@
+<nav>
+  <div>
+    <span class="material-symbols-outlined icone" (click)="viewNavBar = true"
+      >menu</span
+    >
+    <img src="../../../assets/svg/logo.svg" alt="logo-teddy" />
+  </div>
+
+  <div class="lista">
+    <a [routerLink]="'/clientes'" routerLinkActive="active">Clientes</a>
+    <a [routerLink]="'/clientes-selecionados'" routerLinkActive="active"
+      >Clientes selecionados</a
+    >
+    <a (click)="logout()">Sair</a>
+  </div>
+  <p>
+    Olá, <span>{{ nameUsuario }}!</span>
+  </p>
+</nav>
+<div>
+  <teddy-nav-bar
+    *ngIf="viewNavBar"
+    (onFecharNav)="viewNavBar = false"
+  ></teddy-nav-bar>
+</div>
